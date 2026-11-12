@@ -11,7 +11,7 @@
     "build:vinext": "vite build",
     "start:vinext": "vite preview",
     "deploy:vinext": "vinext-cloudflare deploy",
-    "deploy:response-store": "cf deploy --prebuilt --mode production --worker forgevyn-games-response-store"
+    "deploy:response-store": "wrangler deploy -c wrangler.response-store.jsonc"
   },
   "dependencies": {
     "@cloudflare/workers-response-store": "^1.1.5",
@@ -35,12 +35,15 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.3.0",
     "@vitejs/plugin-rsc": "^0.5.39",
     "cf": "^1.0.0-beta.30",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
     "tailwindcss": "4.3.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^8.3.8",
+    "wrangler": "^4.161.0"
   },
   "type": "module",
   "allowScripts": {
